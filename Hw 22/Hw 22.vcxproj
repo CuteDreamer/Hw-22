@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Hw 22.cpp" />
+    <ClCompile Include="Plant.cpp" />
+    <ClCompile Include="Tech.cpp" />
+    <ClCompile Include="Transport.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="Plant.h" />
+    <ClInclude Include="Tech.h" />
+    <ClInclude Include="Transport.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
