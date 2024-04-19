@@ -19,6 +19,14 @@ public:
 		clean = false;
 		working = true;
 	}
+	Window(string color, unsigned short glasses, string material, bool clean, bool working)
+	{
+		this->color = color;
+		this->glasses = glasses;
+		this->material = material;
+		this->clean = clean;
+		this->working = working;
+	}
 	~Window()
 	{
 		cout << "Window was destoyed!!!\n";

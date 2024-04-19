@@ -10,11 +10,20 @@ class Cat {
 
 public:
 	Cat() {
+		cout << "Cat was created!\n";
 		age = 7;
 		legs = 5;
 		ears = 2;
 		color = "red";
 		name = "Alex";
+	}
+	Cat(unsigned short age, unsigned short legs, unsigned short ears, string color, string name) {
+		this->age = age;
+		this->legs = legs;
+		this->ears = ears;
+		this->color = color;
+		this->name = name;
+		cout << "Cat was created!\n";
 	}
 	~Cat()
 	{

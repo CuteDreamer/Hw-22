@@ -13,6 +13,12 @@ public:
 		alive = true;
 		height = 1.30;
 	}
+	Plant(string color, bool alive, float height)
+	{
+		this->color = color;
+		this->alive = alive;
+		this->height = height;
+	}
 	~Plant()
 	{
 		cout << "Plant was destoyed!!!\n";

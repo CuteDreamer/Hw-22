@@ -18,4 +18,7 @@ int main()
 
 	Tech Phone;
 	Phone.Print();
+
+	Cat Fedor(7, 5, 2, "red", "Fedor");
+	
 }

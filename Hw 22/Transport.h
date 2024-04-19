@@ -18,6 +18,14 @@ public:
 		wheels = 4;
 		working = true;
 	}
+	Transport(string brand, string model, unsigned short max_speed, unsigned short wheels, bool working)
+	{
+		this->brand = brand;
+		this->model = model;
+		this->max_speed = max_speed;
+		this->wheels = wheels;
+		this->working = working;
+	}
 	~Transport()
 	{
 		cout << "Transport was destoyed!!!\n";

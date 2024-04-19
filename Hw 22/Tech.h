@@ -15,6 +15,13 @@ public:
 		price = 15000;
 		working = true;
 	}
+	Tech(string brand, string color, float price, bool working)
+	{
+		this->brand = brand;
+		this->color = color;
+		this->price = price;
+		this->working = working;
+	}
 	~Tech()
 	{
 		cout << "Tech was destoyed!!!\n";
