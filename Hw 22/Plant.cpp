@@ -10,10 +10,10 @@ void Plant::SetColor(string color)
 void Plant::SetIsAlive(bool alive)
 {
 	if (alive == 1) {
-		cout << "It works!";
+		cout << "It alive!\n";
 	}
 	else {
-		cout << "Not works...";
+		cout << "Not alive...\n";
 	}
 	this->alive = alive;
 }

@@ -16,9 +16,18 @@ int main()
 	Plant Ficus;
 	Ficus.Print();
 
-	Tech Phone;
-	Phone.Print();
-
 	Cat Fedor(7, 5, 2, "red", "Fedor");
+	Fedor.Print();
+
+	Tech phone("samsung");
+	phone.Print();
+
+	Tech iphone("apple", "blue");
+	iphone.Print();
 	
+	Tech Sony("Sony", "grey", 25000);
+	Sony.Print();
+
+	Tech Huyowiy("Noname", "white", 7000, false);
+	Huyowiy.Print();
 }

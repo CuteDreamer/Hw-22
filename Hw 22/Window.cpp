@@ -10,19 +10,19 @@ void Window::SetColor(string color)
 void Window::SetWork(bool working)
 {
 	if (working == 1) {
-		cout << "It works!";
+		cout << "It works!\n";
 	}
 	else {
-		cout << "Not works...";
+		cout << "Not works...\n";
 	}
 	this->working = working;
 }
 void Window::SetGlasses(unsigned short glasses)
 {
 	if (glasses < 1 || glasses > 3) {
-		cout << "You are drunked! Go to sleep..";
+		cout << "You are drunked! Go to sleep..\n";
 	}
-	else { cout << "Ok"; }
+	else { cout << "Ok\n"; }
 	this->glasses = glasses;
 }
 void Window::SetMaterial(string material)
@@ -32,10 +32,10 @@ void Window::SetMaterial(string material)
 void Window::SetClean(bool clean)
 {
 	if (clean == 1) {
-		cout << "Its clean!";
+		cout << "Its clean!\n";
 	}
 	else {
-		cout << "Not clean...";
+		cout << "Not clean...\n";
 	}
 	this->clean = clean;
 }

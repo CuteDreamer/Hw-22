@@ -5,10 +5,10 @@ using namespace std;
 void Cat::SetName(string name)
 {
 	if (name != "Alex") {
-		cout << "Error, name is not " << name << ". True name is Alex!!";
+		cout << "Error, name is not " << name << "True name is Alex!!" << "\n";
 	}
 	else {
-		cout << "Ok, name is " << name;
+		cout << "Ok, name is " << name << "\n";
 	}
 	this->name = name;
 }
@@ -21,29 +21,29 @@ void Cat::SetColor(string color)
 void Cat::SetAge(unsigned short age)
 {
 	if (age > 33 && age < 40) {
-		cout << "Ok!!";
+		cout << "Ok!!" << "\n";
 	}
-	else { cout << "Fatal ERROR!! :D "; }
+	else { cout << "Fatal ERROR!! :D Age must be from 33 to 40 :D " << "\n"; }
 	this->age = age;
 }
 
 void Cat::SetEars(unsigned short ears)
 {
 	if (ears < 1 || ears > 2) {
-		cout << "You must go to the psychiatrist :D";
+		cout << "You must go to the psychiatrist :D" << "\n";
 	}
-	else { cout << "Ok"; }
+	else { cout << "Ok" << "\n"; }
 	this->ears = ears;
 }
 
 void Cat::SetLegs(unsigned short legs) {
 	if (legs < 4 || legs > 5) {
-		cout << "Welcome to our clinic :D";
+		cout << "Welcome to our clinic :D" << "\n" ;
 	}
 	else if (legs > 1 && legs < 4) {
-		cout << "Pure cat...it's not Alex, it's Mr.Crabs";
+		cout << "Pure cat...it's not Alex, it's Mr.Crabs" << "\n";
 	}
-	else { cout << "Ok"; }
+	else { cout << "Ok" << "\n"; }
 	this->legs = legs;
 }
 

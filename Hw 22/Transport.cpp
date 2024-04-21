@@ -26,10 +26,10 @@ void Transport::SetWheels(unsigned short wheels)
 void Transport::SetWork(bool working)
 {
 	if (working == 1) {
-		cout << "It works!";
+		cout << "It works!\n";
 	}
 	else {
-		cout << "Not works...";
+		cout << "Not works...\n";
 	}
 	this->working = working;
 }
@@ -53,6 +53,6 @@ string Transport::GetModel() const
 {
 	return model;
 }
-void Transport::IsGoing() { cout << "Going..."; }
-void Transport::Stay() const { cout << "Parking..."; }
-void Transport::Sale() { cout << "For Sale!!"; }
+void Transport::IsGoing() { cout << "Going...\n"; }
+void Transport::Stay() const { cout << "Parking...\n"; }
+void Transport::Sale() { cout << "For Sale!!\n"; }

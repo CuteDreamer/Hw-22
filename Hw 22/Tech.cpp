@@ -20,10 +20,10 @@ void Tech::SetPrice(float price)
 void Tech::SetWorking(bool working)
 {
 	if (working == 1) {
-		cout << "It works!";
+		cout << "It works!\n";
 	}
 	else {
-		cout << "Not works...";
+		cout << "Not works...\n";
 	}
 	this->working = working;
 }
@@ -51,6 +51,6 @@ void Tech::Print()
 	cout << "Color: " << GetColor() << "\n\n\n";
 }
 
-void Tech::On() const { cout << "Power on..."; }
-void Tech::Off() const { cout << "Power off..."; }
-void Tech::Charge() { cout << "Charging..."; }
+void Tech::On() const { cout << "Power on...\n"; }
+void Tech::Off() const { cout << "Power off...\n"; }
+void Tech::Charge() { cout << "Charging...\n"; }
