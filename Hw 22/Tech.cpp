@@ -27,6 +27,12 @@ void Tech::SetWorking(bool working)
 	}
 	this->working = working;
 }
+
+void Tech::SetCountTech(int count_tech)
+{
+	this->count_tech = count_tech;
+}
+
 bool Tech::GetWorking() const
 {
 	return working;
@@ -43,6 +49,12 @@ string Tech::GetColor() const
 {
 	return color;
 }
+int Tech::GetCountTech() const
+{
+	return count_tech;
+}
+
+
 void Tech::Print()
 {
 	cout << "Is working: " << GetWorking() << "\n";

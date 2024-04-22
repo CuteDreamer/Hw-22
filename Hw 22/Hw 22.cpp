@@ -12,4 +12,18 @@ int main()
 {
 	Plant Valera("blue", false, 1.85, 5);
 	Valera.Print();
+
+	Plant original("green", true, 1.8, 4);
+	original.Print();
+
+	Plant copy = original;
+	copy.Print();
+
+	Tech phone("Huyowiy", "brown", 7000.1, false, 5); // я честно хотел написать ксяоми
+	phone.Print();
+
+	Tech copy1 = phone;
+	copy1.Print();
+
+	cout << "You have 2 Huyowiy phones...Good Luck!";
 }

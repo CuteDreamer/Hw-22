@@ -29,7 +29,7 @@ public:
 		SetIsAlive(alive);
 		SetHeight(height);
 		SetLeavesCount(leaves_count);
-		leaves = new int[leaves_count];                        // здесь выделил память
+		leaves = new int[leaves_count];                  // здесь выделил память
 		for (int i = 0; i < leaves_count; i++) {
 			leaves[i] = rand() % leaves_count + 1;
 			cout << leaves[i] << "\n";                   // проверка выделилась ли память
@@ -37,11 +37,25 @@ public:
 		cout << "Plant was created with all params!!\n";
 	}
 
+	Plant(const Plant& original)                         // конструктор копирования
+	{
+		SetColor(original.color);
+		SetIsAlive(original.alive);
+		SetHeight(original.height);
+		SetLeavesCount(original.leaves_count);
+		leaves = new int[original.leaves_count];
+		for (int i = 0; i < original.leaves_count; i++) {
+			this->leaves[i] = original.leaves[i];
+			cout << original.leaves[i] << "\n";
+		}
+		cout << "Copy of Plant was created!!\n";
+	}
+
 	~Plant()
 	{
-		delete leaves;
+		delete[] leaves;
 		cout << "Plant was destoyed!!!\n";
-		cout << leaves[1];                               // проверка очистилась ли память
+		cout << leaves[1] << "\n";                               // проверка очистилась ли память
 		leaves = nullptr;
 	}
 
