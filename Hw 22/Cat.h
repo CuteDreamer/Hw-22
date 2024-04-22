@@ -17,39 +17,29 @@ public:
 
 	Cat(unsigned short age) : Cat(age, 5, 2, "red", "Alex")
 	{
-		SetAge(age);
+		cout << "c-tor with age param\n";
 	}
-
 	Cat(unsigned short age, unsigned short legs) : Cat(age, legs, 2, "red", "Alex")
 	{
-		SetAge(age);
-		SetLegs(legs);
+		cout << "c-tor with age, legs param\n";
 	}
-
 	Cat(unsigned short age, unsigned short legs, unsigned short ears) : Cat(age, legs, ears, "red", "Alex")
 	{
-		SetAge(age);
-		SetLegs(legs);
-		SetEars(ears);
+		cout << "c-tor with age, legs, ears param\n";
 	}
-
 	Cat(unsigned short age, unsigned short legs, unsigned short ears, string color) : Cat(age, legs, ears, color, "Alex")
 	{
-		SetAge(age);
-		SetLegs(legs);
-		SetEars(ears);
-		SetColor(color);
+		cout << "c-tor with age, legs, ears, color param\n";
 	}
 
 	// main конструктор (главный)
-
 	Cat(unsigned short age, unsigned short legs, unsigned short ears, string color, string name) {
 		SetName(name);
 		SetColor(color);
 		SetAge(age);
 		SetEars(ears);
 		SetLegs(legs);
-		cout << "Cat was created!!!\n";
+		cout << "Cat was created with main c-tor (all params) !!!\n";
 	}
 
 

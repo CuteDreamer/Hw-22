@@ -15,13 +15,10 @@ public:
 
 	Plant(string color) : Plant(color, true, 3.1)
 	{
-		SetColor(color);
 		cout << "with color\n";
 	}
 	Plant(string color, bool alive) : Plant(color, alive, 3.1)
 	{
-		SetColor(color);
-		SetIsAlive(alive);
 		cout << "with color, alive\n";
 	}
 

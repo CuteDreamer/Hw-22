@@ -62,6 +62,15 @@ bool Window::GetWorking() const
 	return working;
 }
 
+void Window::Print() const
+{
+	cout << "Color: " << GetColor() << "\n";
+	cout << "Glasses: " << GetGlasses() << "\n";
+	cout << "Material: " << GetMaterial() << "\n";
+	cout << "Clean: " << GetClean() << "\n";
+	cout << "Is working: " << GetWorking() << "\n";
+
+}
 void Window::Open() const { cout << "Open..."; }
 void Window::Close() const { cout << "Closed"; }
 void Window::Broken() const { cout << "Broken!!"; }

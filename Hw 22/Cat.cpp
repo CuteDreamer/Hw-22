@@ -5,7 +5,7 @@ using namespace std;
 void Cat::SetName(string name)
 {
 	if (name != "Alex") {
-		cout << "Error, name is not " << name << "True name is Alex!!" << "\n";
+		cout << "Error, name is not " << name << "\nTrue name is Alex!!" << "\n";
 	}
 	else {
 		cout << "Ok, name is " << name << "\n";
