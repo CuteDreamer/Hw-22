@@ -6,51 +6,54 @@ class Plant {
 	string color;
 	bool alive;
 	float height;
+	int* leaves = nullptr;                                            // вот здесь применил указатель
+	int leaves_count = 0;
 
 public:
-	Plant() : Plant("green", true, 3.1)
+	Plant() : Plant("green", true, 3.1, leaves_count)
 	{
 		cout << "Std c-tor\n";
 	}
 
-	Plant(string color) : Plant(color, true, 3.1)
+	Plant(string color) : Plant(color, true, 3.1, leaves_count)
 	{
 		cout << "with color\n";
 	}
-	Plant(string color, bool alive) : Plant(color, alive, 3.1)
+	Plant(string color, bool alive) : Plant(color, alive, 3.1, leaves_count)
 	{
 		cout << "with color, alive\n";
 	}
 
-	Plant(string color, bool alive, float height) {
+	Plant(string color, bool alive, float height, int leaves_count) {
 		SetColor(color);               
 		SetIsAlive(alive);
 		SetHeight(height);
+		SetLeavesCount(leaves_count);
+		leaves = new int[leaves_count];                        // здесь выделил память
+		for (int i = 0; i < leaves_count; i++) {
+			leaves[i] = rand() % leaves_count + 1;
+			cout << leaves[i] << "\n";                   // проверка выделилась ли память
+		}
 		cout << "Plant was created with all params!!\n";
 	}
-	
 
-
-
-	// main конструктор
-	/*Plant(string color, bool alive, float height)  
-	{
-		this->color = color;
-		this->alive = alive;
-		this->height = height;
-	}*/
 	~Plant()
 	{
+		delete leaves;
 		cout << "Plant was destoyed!!!\n";
+		cout << leaves[1];                               // проверка очистилась ли память
+		leaves = nullptr;
 	}
 
 	void SetColor(string color);
 	void SetIsAlive(bool alive);
 	void SetHeight(float height);
+	void SetLeavesCount(int leaves_count);
 
-	string GetColor();
+	string GetColor() const; 
 	bool GetAlive() const;
 	float GetHeight() const;
+	int GetLeavesCount()const;
 
 	void Print();
 	void Stay() const;

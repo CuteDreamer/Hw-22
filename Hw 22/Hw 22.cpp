@@ -10,9 +10,6 @@ using namespace std;
 
 int main()
 {
-	Cat Alex;
-	Alex.Print();
-
-	Cat Fedor(7, 5, 2);
-	Fedor.Print();
+	Plant Valera("blue", false, 1.85, 5);
+	Valera.Print();
 }

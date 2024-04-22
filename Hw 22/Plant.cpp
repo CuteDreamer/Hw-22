@@ -22,6 +22,11 @@ void Plant::SetHeight(float height)
 	this->height = height;
 }
 
+void Plant::SetLeavesCount(int leaves_count)
+{
+	this->leaves_count = leaves_count;
+}
+
 bool Plant::GetAlive() const
 {
 	return alive;
@@ -30,14 +35,20 @@ float Plant::GetHeight() const
 {
 	return height;
 }
-string Plant::GetColor()
+string Plant::GetColor() const
 {
 	return color;
 }
+int Plant::GetLeavesCount() const
+{
+	return leaves_count;
+}
+
 void Plant::Print() {
 	cout << "Is alive: " << GetAlive() << "\n";
 	cout << "Age: " << GetHeight() << "\n";
-	cout << "Color: " << GetColor() << "\n\n\n";
+	cout << "Color: " << GetColor() << "\n";
+	cout << "Leaves: " << GetLeavesCount() << "\n\n";
 }
 
 void Plant::Stay() const { cout << "Staying..."; }
