@@ -10,16 +10,16 @@ class Plant {
 	int leaves_count = 0;
 
 public:
-	Plant() : Plant("green", true, 3.1, leaves_count)
+	Plant() : Plant("green", true, 3.1, 0)
 	{
 		cout << "Std c-tor\n";
 	}
 
-	Plant(string color) : Plant(color, true, 3.1, leaves_count)
+	Plant(string color) : Plant(color, true, 3.1, 0)
 	{
 		cout << "with color\n";
 	}
-	Plant(string color, bool alive) : Plant(color, alive, 3.1, leaves_count)
+	Plant(string color, bool alive) : Plant(color, alive, 3.1, 0)
 	{
 		cout << "with color, alive\n";
 	}

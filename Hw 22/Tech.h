@@ -6,24 +6,24 @@ class Tech {
 	string color;
 	float price;
 	bool working;
-	int* count;
-	int count_tech;
+	int* count = nullptr;
+	int count_tech = 0;
 
 public:
-	Tech() : Tech("Samsung", "black", 15000, true, count_tech)
+	Tech() : Tech("Samsung", "black", 15000, true, 0)
 	{
 		cout << "Default c-tor\n";
 	}
 
-	Tech(string brand) : Tech(brand, "black", 15000, true, count_tech)
-	{
+	Tech(string brand) : Tech(brand, "black", 15000, true, 0)
+	{ 
 		cout << "With brand\n";
 	}
-	Tech(string brand, string color) : Tech(brand, color, 15000, true, count_tech)
+	Tech(string brand, string color) : Tech(brand, color, 15000, true, 0)
 	{
 		cout << "With brand, color\n";
 	}
-	Tech(string brand, string color, float price) : Tech(brand, color, price, true, count_tech)
+	Tech(string brand, string color, float price) : Tech(brand, color, price, true, 0)
 	{
 		cout << "With brand, color, price\n";
 	}
