@@ -24,7 +24,7 @@ public:
 		cout << "with color, alive\n";
 	}
 
-	Plant(string color, bool alive, float height, int leaves_count) {
+	Plant(string color, bool alive, float height, int leaves_count) {               // main constructor
 		SetColor(color);               
 		SetIsAlive(alive);
 		SetHeight(height);
