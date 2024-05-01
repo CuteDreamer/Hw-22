@@ -86,15 +86,15 @@ void MyString::Reverse()
 		cout << text[i] << "\n";
 	}
 }
-void MyString::Concat(const MyString& other) {
-	unsigned int newLength = this->length + other.length;
-	if (newLength >= this->capacity) {
-	char* newText = new char[newLength + 5];
-	strcpy(newText, this->text);
-	delete[] this->text;
-	this->text = newText;
-	this->capacity = newLength + 5;
-	strcat(this->text, other.text);                              // Copy-Paste....
-	this->length = newLength;
-	}
-}
+//void MyString::Concat(const MyString& other) {
+//	unsigned int newLength = this->length + other.length;
+//	if (newLength >= this->capacity) {
+//	char* newText = new char[newLength + 5];
+//	strcpy(newText, this->text);
+//	delete[] this->text;
+//	this->text = newText;
+//	this->capacity = newLength + 5;
+//	strcat(this->text, other.text);                              // Copy-Paste....
+//	this->length = newLength;
+//	}
+//}

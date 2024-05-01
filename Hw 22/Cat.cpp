@@ -80,3 +80,26 @@ void Cat::Play() { cout << "Playing with 5 leg...:D"; }
 void Cat::Voice() { cout << "Go to ATB! Dont touch my beer! Miu-miu-miu"; }
 void Cat::Eating() { cout << "Nice Shaurma, guys!!"; }
 void Cat::Walking() { cout << "Walking with beer...."; }
+
+
+ostream& operator << (ostream& os, const Cat& f)                   // перегрузка операторов
+{
+	os << f.GetName() << '/' << f.GetAge();
+	return os;
+}
+
+istream& operator >> (istream& is, Cat& f)
+{
+	int a;
+	string n;
+
+	cout << "Input name: ";
+	is >> n;
+	cout << "input age: ";
+	is >> a;
+
+	f.SetName(n);
+	f.SetAge(a);
+
+	return is;
+}

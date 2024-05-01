@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
 using namespace std;
+
+
+
 class Cat {
 	unsigned short age;
 	unsigned short legs;
@@ -43,7 +46,7 @@ public:
 	}
 
 
-
+	
 
 	/*Cat(unsigned short age, unsigned short legs, unsigned short ears, string color, string name) {
 		this->age = age;
@@ -75,4 +78,7 @@ public:
 	void Eating(); 
 	void Walking();
 	void Print();
+
 };
+ostream& operator << (ostream& os, const Cat& f);                 // перегрузка операторов
+istream& operator >> (istream& is, Cat& f);
