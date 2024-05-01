@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayList.cpp" />
     <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Hw 22.cpp" />
     <ClCompile Include="MyString.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayList.h" />
     <ClInclude Include="Cat.h" />
     <ClInclude Include="MyString.h" />
     <ClInclude Include="Plant.h" />
