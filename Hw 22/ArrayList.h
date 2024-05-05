@@ -1,29 +1,48 @@
 #pragma once
 #include <iostream>
 using namespace std;
-class ArrayList
+class ArrayList // Vector
 {
-    int* arr; // Указатель на массив
-    int capacity; // Вместимость массива
-    int size; // Текущий размер массива
-
-    void EnsureCapacity(int minCapacity);         // private prototype
-
+	unsigned int size = 0; // количество действительно присутствующих элементов в контейнере
+	unsigned int capacity = 10; // ёмкость (вместительность, запас памяти)
+	int* data = nullptr; // указатель на динамический массив целых чисел
 
 public:
-    // Конструктор
-    ArrayList() {
-        arr = new int[1];
-        capacity = 1;
-        size = 0;
-    }
+	ArrayList() : ArrayList(10)
+	{
+		// cout << "C-TOR WITHOUT PARAMS!\n";
+	}
 
-    // Деструктор
-    ~ArrayList() {
-        delete[] arr;
-    }
+	ArrayList(unsigned int capacity)
+	{
+		if (capacity < 10)
+		{
+			capacity = 10;
+		}
+		this->capacity = capacity;
+		data = new int[capacity];
+		// cout << "C-TOR WITH PARAMS!\n";
+	}
 
-    int GetSize() const;            // prototypes getters
-    int GetCapacity() const;
+	~ArrayList()
+	{
+		// cout << "DESTRUCTOR!\n";
+		if (data != nullptr)
+		{
+			delete[] data;
+			data = nullptr;
+		}
+	}
+
+
+	int GetCapacity() const;
+	int GetSize() const;
+
+	void EnsureCapacity(int minCapacity);
+	void PushBack(int value);
+	void PushFront(int value);
+	void Clear();
+	bool IsEmpty() const;
+	void Print() const;
+
 };
-
