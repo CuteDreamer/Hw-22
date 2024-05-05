@@ -44,16 +44,16 @@ int main()
     arr.PushBack(3);
 
     // Выводим размер и вместимость
-    cout << "Size: " << arr.GetSize() << endl;
-    cout << "Capacity: " << arr.GetCapacity() << endl;
+    cout << "Size: " << arr.GetSize() << "\n";
+    cout << "Capacity: " << arr.GetCapacity() << "\n";
 
     // Выводим все элементы
     arr.Print();
 
     // Используем EnsureCapacity
-    cout << "Ensuring capacity for 20 elements..." << endl;
+    cout << "Ensuring capacity for 20 elements..." << "\n";
     arr.EnsureCapacity(20);
-    cout << "New capacity: " << arr.GetCapacity() << endl;
+    cout << "New capacity: " << arr.GetCapacity() << "\n";
 
     // Добавляем больше элементов
     for (int i = 4; i < 20; i++) {
@@ -61,8 +61,8 @@ int main()
     }
 
     // Выводим размер и вместимость
-    cout << "Size: " << arr.GetSize() << endl;
-    cout << "Capacity: " << arr.GetCapacity() << endl;
+    cout << "Size: " << arr.GetSize() << "\n";
+    cout << "Capacity: " << arr.GetCapacity() << "\n";
 
     // Выводим все элементы
     arr.Print();
