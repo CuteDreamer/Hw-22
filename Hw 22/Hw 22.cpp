@@ -6,6 +6,7 @@
 #include "Plant.h"
 #include "MyString.h"
 #include "ArrayList.h"
+#include "stack"
 
 using namespace std;
 
@@ -67,5 +68,26 @@ int main()
     // Выводим все элементы
     arr.Print();
 
+stack<int> WTF;                           
+WTF.push(1);
+WTF.push(2);
+WTF.push(3);
+WTF.push(4);
+WTF.push(5);
+WTF.pop();
+WTF.pop();
+
+stack<int> temp;
+
+while (!WTF.empty()) {
+    temp.push(WTF.top());
+    WTF.pop();
+}
+
+while (!temp.empty()) {
+    cout << temp.top() << "\n";
+    WTF.push(temp.top());                 // по вашему примеру
+    temp.pop();
+}
 
 } 
